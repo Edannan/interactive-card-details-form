@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="split left"></div>
+
+  <div class="split right">
+    <div class="thanks">
+      <div><img src='/images/icon-complete.svg' alt='complete'></div>
+      <div class="you">THANK YOU!</div>
+      <div class="det">We've added your card details</div>
+      <div class="btn-div">
+        <button type="submit" id="submission" class="confirmbtn">Continue</button>
+      </div>
+    </div>
+    
+    <div class="myformdiv">
+      <form name="cardForm" id="cardForm">
+        <div class="name" id="name">
+          <label>Cardholder Name</label><br>
+          <input type="text" id="cardHolder" class="cardHolder" placeholder="e.g. Jane Appleseed" oninput="nameFt()"><br>
+          <div class="error uno"  id="uno"></div>
+        </div><br>
+
+        <div class="number" id="number">
+          <label>Card Number</label><br>
+          <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" oninput="numberFt()"><br>
+          <div class="error dos" id="dos"></div>
+        </div><br>
+
+
+        <div class="dateandnumber" id="dateandnumber">
+          <div class="date">
+            <div class="mon">
+              <label>Exp. Date </label><br>
+            <input type="number" id="month" min="1" max="12" placeholder="MM" oninput="monFt()"><br>
+            <div class="error tres" id="tres"></div>
+          </div>
+          <div class="yea">
+            <label>(MM/YY)</label><br>
+            <input type="number" id="year" min="01" max="99" placeholder="YY" oninput="yearFt()">
+          </div>
+          </div>
+
+          <div class="cvc" id="cvc">
+            <label>CVC</label><br>
+            <input type="number" id="cvcnum" min="001" max="999" placeholder="e.g. 123" oninput="cvcFt()"><br>
+            <div class="error four" id="four"></div>
+          </div>
+
+        </div><br>
+
+        <div class="btn-div">
+          <button type="submit" id="submission" class="confirmbtn">Confirm</button>
+        </div>
+    
+      </form>
+    </div>  
+  
+  </div>
+
+  <div class="front card">
+    <div class="first circle"></div>
+    <div class="second circle"></div>
+    <div class="numero" id="numero">0000 0000 0000 0000</div>
+
+    <div class="nacv">
+      <div class="nombre" id="nombre">Jane Appleseed</div>
+      <div class="dia"><div class="moo" id="moo">00</div>/<div class="yes" id="yes">00</div></div>
+    </div>
+  </div>
+
+  
+<div class="back card">
+  <div class="space">danso</div>
+  <div class="cvcontainer"><div class="threed" id="threed">000</div></div>
+</div>
+
+ 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Emmanuel Danso Annan</a>.
+  </div>
+
+<script src="index.js"></script>
+</body>
+</html>

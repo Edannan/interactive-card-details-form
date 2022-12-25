@@ -1,0 +1,706 @@
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+body{
+    font-family: SpaceGrotesk;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.left{
+   position:fixed;
+   width:30%;
+   height: 100%;
+   left:0;
+   background-image: url(/images/bg-main-desktop.png);
+   /* background-image:linear-gradient(to bottom right, hsl(278, 68%, 11%), hsl(278, 94%, 30%), hsl(249, 99%, 64%), hsl(278, 68%, 11%)); */
+}
+
+.right{
+  position:fixed;
+  right:0;
+  height: 100%;
+  width:70%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.myformdiv{
+    position: absolute;
+    top:30%;
+    right:15%;
+    width: 40%;
+    color: hsl(278, 68%, 11%);
+}
+
+.thanks{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:30%;
+    right:15%;
+    width: 40%;
+    display: none;
+}
+
+.you{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: hsl(278, 68%, 11%);
+}
+
+.det{
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.name{
+    width: 100%;
+}
+
+.number{
+    width:100%;
+}
+
+input{
+    width: 80%;
+    padding:6px 5px 6px 5px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    
+}
+
+input:focus{
+    /* padding: 0.5rem;
+    border: double 3px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to right, hsla(249, 99%, 64%, 0.5), hsla(278, 94%, 30%, 0.5));
+    background-origin: border-box;
+    background-clip: padding-box, border-box; */
+
+    /* border: 1px solid red;
+    outline: none; */
+
+    border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-width: 1px;
+    border-radius: 6px;
+    border-image-slice: 1;
+    outline: none;
+}
+
+.dateandnumber{
+    display: flex;
+    width: 80%;
+}
+
+.date{
+    display: flex;
+    width: 50%;
+}
+
+.cvc{
+    width: 50%;
+}
+
+.cvc input{
+    width: 100%;
+}
+
+.btn-div{
+    width: 80%;
+}
+
+.mon input{
+    width: 100%;
+}
+
+.yea input{
+    width: 100%;  
+}
+
+.yea{
+    margin-left: 10px;
+}
+
+.dia{
+    display: flex;
+}
+
+.btn-div .confirmbtn{
+    width: 100%;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    padding:10px 9px 10px 9px;
+    border-radius: 7px;
+    transition: all 0.35s;
+}
+
+.btn-div .confirmbtn:hover{
+    background-color: hsla(278, 68%, 11%, 0.3);
+    cursor: pointer;
+
+
+}
+
+.card{
+    position:fixed;
+    width:21.875rem;
+    height:12.5rem;
+    border-radius: 10px;
+}
+
+.front{
+    background-image: linear-gradient(to bottom right, hsl(249, 99%, 64%), hsl(279, 6%, 55%), hsl(278, 94%, 30%), hsl(279, 6%, 55%), hsl(278, 68%, 11%) );
+    top:120px;
+    left:230px;
+}
+
+.back{
+    background-color: lightgray;
+    top:360px;
+    left:300px;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.front .first{
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 25px;
+    left: 25px;
+}
+
+.front .second{
+    position: absolute;
+    border: 1px solid white;
+    width: 17px;
+    height: 17px;
+    top: 40px;
+    left:80px;
+}
+
+.numero{
+    position: absolute;
+    width: 90%;
+    color: white;
+    top:60%; /*125px*/
+    left:1.09375rem;  /*17.5px*/
+    text-align: center;
+    font-size: 1rem;  /*25px */
+    letter-spacing: 0.1875rem; /*3px */
+}
+
+.nacv{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    width:93%;
+    left:12.25px;
+    top:85%; /*170px*/
+}
+
+.back .space{
+    position: absolute;
+    width: 100%;
+    height:40px;
+    background-color: rgb(51, 49, 49);
+    color: rgb(51, 49, 49);
+    top:25px;
+
+}
+
+.back .cvcontainer{
+    position: absolute;
+    background-color: rgb(133, 144, 155);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:80%;
+    height:30px;
+    left: 35px;
+    top:90px;
+}
+
+.error{
+    color: red;
+    font-size: 9px;
+}
+
+/* hr {
+    position: absolute;
+    top:150px;
+    border: none;
+    border-top: 1px dotted #f00;
+    color: gray;
+    background-color: #fff;
+    height: 1px;
+    width: 40%;
+    left:105px;
+  } */
+
+
+
+
+/*------------------------------------------------------Media Queries-----------------------------------------------------------------------*/
+
+@media(max-width:322px){
+    .left{
+        position:fixed;
+        height:30%;
+        top:0%;
+        width:100%;
+     }
+     
+     .right{
+       position:fixed;
+       width: 100%;
+       bottom:0%;
+       height:70%;
+     }
+
+     .myformdiv{
+        position: absolute;
+        top:25%;
+        right:5%;
+        width: 90%;
+    }
+
+    .thanks{
+        right: 5%;
+        width: 90%;
+    }
+
+    .det{
+        margin-bottom: 40px;
+    }
+    
+    .cvc input{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        padding:10px 9px 10px 9px;
+    }
+
+    .dateandnumber{
+        width: 100%;
+    }
+
+    .date{
+        width: 70%;
+    }
+    
+    .cvc{
+        width: 30%;
+    }
+
+    .btn-div{
+        width: 100%;
+    }
+
+    .yea{
+        margin-left: 20px;
+    }
+
+    .card{
+        width:70%;
+        height:25%;
+    }
+
+    .front{
+        top:125px;
+        left:30px;
+        z-index: 999;
+    }
+    
+    .back{
+        top:5px;
+        left:80px;
+        z-index: 99;
+    }
+
+    .numero{
+        font-size: 0.7rem;
+    }
+
+    .nacv{
+        font-size: 10px;
+    }
+
+
+} 
+
+
+@media(max-width:377px) and (min-width: 322px){
+    .left{
+        position:fixed;
+        height:30%;
+        top:0%;
+        width:100%;
+     }
+     
+     .right{
+       position:fixed;
+       width: 100%;
+       bottom:0%;
+       height:70%;
+     }
+
+     .myformdiv{
+        position: absolute;
+        top:25%;
+        right:5%;
+        width: 90%;
+    }
+
+    .thanks{
+        right: 10%;
+        width: 80%;
+    }
+
+    .cvc{
+        /* background-color: red; */
+        width: 49%;
+    }
+    
+    .cvc input{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        padding:10px 9px 10px 9px;
+    }
+
+    .dateandnumber{
+        width: 100%;
+    }
+
+    .date{
+        width: 52%;
+    }
+    
+    .cvc{
+        width: 48%;
+    }
+
+    .btn-div{
+        width: 100%;
+    }
+
+    .yea{
+        margin-left: 20px;
+    }
+
+    .card{
+        width:70%;
+        height:25%;
+    }
+
+    .front{
+        top:130px;
+        left:40px;
+        z-index: 999;
+    }
+    
+    .back{
+        top:10px;
+        left:90px;
+        z-index: 99;
+    }
+
+    .numero{
+        font-size: 0.9rem;
+    }
+
+    .nacv{
+        font-size: 10px;
+    }
+
+
+}
+
+@media (max-width: 540px) and (min-width: 377px){
+
+    .left{
+        position:fixed;
+        height:30%;
+        top:0%;
+        width:100%;
+     }
+     
+     .right{
+       position:fixed;
+       width: 100%;
+       bottom:0%;
+       height:70%;
+     }
+
+     .myformdiv{
+        position: absolute;
+        top:25%;
+        right:5%;
+        width: 90%;
+    }
+
+    .thanks{
+        right: 10%;
+        width: 80%;
+    }
+
+    .cvc{
+        /* background-color: red; */
+        width: 49%;
+    }
+    
+    .cvc input{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        padding:10px 9px 10px 9px;
+    }
+
+    .dateandnumber{
+        width: 100%;
+    }
+
+    .date{
+        width: 52%;
+    }
+    
+    .cvc{
+        width: 48%;
+    }
+
+    .btn-div{
+        width: 100%;
+    }
+
+    .yea{
+        margin-left: 20px;
+    }
+
+    .card{
+        width:70%;
+        height:25%;
+    }
+
+    .front{
+        top:130px;
+        left:40px;
+        z-index: 999;
+    }
+    
+    .back{
+        top:10px;
+        left:90px;
+        z-index: 99;
+    }
+
+    .numero{
+        font-size: 1rem;
+    }
+
+    .nacv{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 720px) and (min-width: 541px){
+    .left{
+        position:fixed;
+        height:30%;
+        top:0%;
+        width:100%;
+     }
+     
+     .right{
+       position:fixed;
+       width: 100%;
+       bottom:0%;
+       height:70%;
+     }
+
+     .myformdiv{
+        position: absolute;
+        top:25%;
+        right:5%;
+        width: 90%;
+    }
+
+    .thanks{
+        right: 10%;
+        width: 80%;
+    }
+    
+    .cvc input{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        padding:10px 9px 10px 9px;
+    }
+
+    .dateandnumber{
+        width: 100%;
+    }
+
+    .date{
+        width: 30%;
+    }
+    
+    .cvc{
+        width: 70%;
+    }
+
+    .btn-div{
+        width: 100%;
+    }
+
+    .yea{
+        margin-left: 20px;
+    }
+
+    .card{
+        width:70%;
+        height:25%;
+    }
+
+    .front{
+        top:130px;
+        left:30px;
+        z-index: 999;
+    }
+    
+    .back{
+        top:10px;
+        left:90px;
+        z-index: 99;
+    }
+
+    .numero{
+        font-size: 1rem;
+    }
+
+    .nacv{
+        font-size: 10px;
+    }
+
+}
+
+
+@media (max-width: 880px) and (min-width: 721px){
+    input{
+        width: 100%;
+        /* padding:10px 9px 10px 9px; */
+    }
+
+    .dateandnumber{
+        width: 100%;
+    }
+
+    .btn-div{
+        width: 100%;
+    }
+
+    .date{
+        width: 70%;
+    }
+    
+    .cvc{
+        width: 30%;
+    }
+
+    .front{
+        top:120px;
+        left:30px;
+    }
+    
+    .back{
+        top:360px;
+        left:65px;
+    }
+
+    .myformdiv{
+        position: absolute;
+        top:40%;
+        right:15%;
+        width: 40%;
+    }
+
+    .thanks{
+        right: 8%;
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width:1220px) and (min-width:881px){
+
+    .front{
+        top:85px;
+        left:25px;
+    }
+    
+    .back{
+        top:325px;
+        left:60px;
+    }
+
+    .myformdiv{
+        position: absolute;
+        top:35%;
+        right:15%;
+        width: 40%;
+    }
+
+    .date{
+        width: 70%;
+    }
+    
+    .cvc{
+        width: 30%;
+    }
+
+
+    
+}
+
+@media (max-width:1440px) and (min-width:1221px){
+.date{
+    width: 60%;
+}
+
+.cvc{
+    width: 40%;
+}
+
+}
